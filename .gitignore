@@ -1,0 +1,10 @@
+# Arquivos gerados pelo Python
+__pycache__/
+
+# Ignorar ambiente virtual
+venv/
+
+# Ignorar imagens e arquivos gerados
+dados.csv
+empreendimentos.json
+grafico_empreendimentos.png

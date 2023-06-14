@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.data-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.data-table {
+    margin-right: 20px;
+    margin-left: 20px;
+} 
+  
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container_button {
+    text-align: center;
+}
+
+/* Estilos específicos para a página index.html */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para a página dados.html */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para tornar a página responsiva */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    ul {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+
+    table {
+        font-size: 20px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
+
+/* Customização do botão com efeito de hover */
+.button {
+    display: block;
+    margin: auto;
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_download {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Centralização da imagem na página */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Apresentação dos dados</h1>
+    <div class="data-container">
+        <div class="data-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Classe Consumo</th>
+                  <th>Estado</th>
+                  <th>Total de Empreendimentos</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in empreendimentos_data %}
+                <tr>
+                  <td>{{ item['Classe Consumo'] }}</td>
+                  <td>{{ item['Estado'] }}</td>
+                  <td>{{ item['Total de Empreendimentos'] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        <div class="img-container">
+            <img src="{{ url_for('static', filename='grafico_empreendimentos.png') }}" alt="Gráfico de Empreendimentos">
+        </div>
+    </div>
+    <div class="container_button">
+      <button class="button button_download">
+          <a href="{{ url_for('download', filename='empreendimentos.json') }}">Download JSON</a>
+      </button>
+      <button class="button button_download">
+          <a href="{{ url_for('download', filename='dados.csv') }}">Download CSV</a>
+      </button>
+  </div>
+</body>
+</html>

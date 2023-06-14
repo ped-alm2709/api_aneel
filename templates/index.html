@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API ANEEL</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Sobre a aplicação</h1>
+    <br>
+    <div class="data-container">
+        <ul>
+            <li>Use a API da ANEEL para requisição de dados do pacote “relação de empreendimentos
+                de geração distribuída”.
+            </li><br>
+            <li><b>Obs. 1.1:</b> Sugerimos a utilização do “Python” para o consumo de API, mas poderá ser
+                usada a linguagem de programação em que achar mais adequada.
+            </li>
+            <li>
+                <p>Links de referência:</p>
+                <ol>
+                    <li><a href="https://dadosabertos.aneel.gov.br/">Dados abertos da ANEEL</a></li>
+                    <li><a href="https://docs.ckan.org/en/2.9/api/">Documentação sobre o CKAN</a></li><br>
+                </ol>
+            </li>
+            <li>Agregar os dados em base mensal</li><br>
+            <li>O Total de empreendimentos por classe (Residencial, comercial, “...”) e
+                estado federativo.
+            </li><br>
+            <li>A Potência instalada de cada estado</li><br>
+            <li><b>Obs. 1.2:</b> Uso das colunas “DthAtualizaCadastralEmpreend”, ”DscClasseConsumo“,
+                “MdaPotenciaInstaladaKW” e “SigUF”.
+            </li><br>
+            <li>Organização dos dados para estrutura similar a banco de dados SQL: exportar
+                dados em arquivos “json” e “csv”.
+            </li><br>
+        </ul>
+    </div>
+    <br>
+    <button id="btnDados" class="button">Visualizar Dados</button>
+    <script>
+        $(document).ready(function() {
+          $('#btnDados').click(function() {
+            window.location.href = "/dados";
+          });
+        });
+    </script>
+</body>
+</html>
