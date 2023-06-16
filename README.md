@@ -36,7 +36,7 @@ Aplicação para consumir dados abertos da ANEEL e apresentá-los de forma didá
 
 2. **Front-end**
 
-  * Para imprimir os dados utizei um tamplate simples misturando código *[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)* e a biblioteca *[Charts]([https://learn.jquery.com/using-jquery-core/document-ready/](https://www.chartjs.org/docs/latest/)*, baseada em JavaScript.
+  * Para imprimir os dados utizei um tamplate simples misturando código *[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)* e a biblioteca *[Charts](https://www.chartjs.org/docs/latest/)*, baseada em JavaScript.
   
 3. **Instruções**
 
