@@ -32,15 +32,15 @@ Aplicação para consumir dados abertos da ANEEL e apresentá-los de forma didá
   
   * Foi utilizado o *[Python](https://docs.python.org/3/)* como linguagem base para a criação.
     * De forma que fosse possível consumir dados da API da ANEEL e posteriormente filtrá-lo e aprensetar as informações que foram determinadas no escopo direcional, utilizei a biblioteca *[Flask](https://flask.palletsprojects.com/en/2.3.x/)* para subir um servidor local na porta *5000*.
-    * Também foram utilizadas outras bibliotecas como *[Collections](https://docs.python.org/3/library/collections.html), [Matplotlib](https://matplotlib.org/), [urllib](https://docs.python.org/3/library/urllib.html), [json](https://docs.python.org/pt-br/3/library/json.html), [csv](https://docs.python.org/3/library/csv.html)* e *[os](https://docs.python.org/3/library/os.html)*.
+    * Também foram utilizadas outras bibliotecas como *[Collections](https://docs.python.org/3/library/collections.html), [Matplotlib](https://matplotlib.org/), [urllib](https://docs.python.org/3/library/urllib.html), [json](https://docs.python.org/pt-br/3/library/json.html), [csv](https://docs.python.org/3/library/csv.html), [os](https://docs.python.org/3/library/os.html), [Requests](https://pypi.org/project/requests/)* e *[random](https://docs.python.org/3/library/random.html)*.
 
 2. **Front-end**
 
-  * Para imprimir os dados utizei um tamplate simples misturando código *[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)* e *[JQuery](https://learn.jquery.com/using-jquery-core/document-ready/)*.
+  * Para imprimir os dados utizei um tamplate simples misturando código *[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)* e a biblioteca *[Charts]([https://learn.jquery.com/using-jquery-core/document-ready/](https://www.chartjs.org/docs/latest/)*, baseada em JavaScript.
   
 3. **Instruções**
 
   * A aplicação foi crianda em um ambiente virtual do Python. Dessa forma, primeira mente é necessário ativálo através do comando `$ venv/Scripts/Activate` (Windows) ou `$ source venv/bin/activate` (Linux ou macOS) na pasta raiz do projeto.
   * Após ativado o ambiente virtual já é possível subir o servido Flask com o comando `$ flask run` na pasta raiz do projeto. Uma mensagem será printada no prompt de comando informando o resultado do comando, assim como a URL local onde a página será renderizada (http://127.0.0.1:5000).
-  * Acessando a URL informada será possível visualizar a página principal e um botão que redireciona para outro endpoint que exibirá os dados filtrados de forma de tabela.
+  * Acessando a URL informada será possível visualizar a página principal e um botão que redireciona para outro endpoint que exibirá as tabelas em páginas HTML.
 
