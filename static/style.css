@@ -1,33 +1,12 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 20;
     padding: 0;
 }
 
-.data-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-.data-table {
-    margin-right: 20px;
-    margin-left: 20px;
-} 
-  
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.container_button {
-    text-align: center;
-}
-
 /* Estilos específicos para a página index.html */
-h1 {
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -95,27 +74,4 @@ th {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.button_download {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-}
-
-.button:hover {
-    background-color: #45a049;
-}
-
-/* Centralização da imagem na página */
-.img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.img-container img {
-    max-width: 100%;
-    height: auto;
 }

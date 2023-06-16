@@ -9,14 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Sobre a aplicação</h1>
+    <h1>Sobre a Aplicação</h1>
     <br>
+    <hr>
     <div class="data-container">
+        <h3>1. REQUISIÇÃO E ORGANIZAÇÃO DOS DADOS</h3>
         <ul>
             <li>Use a API da ANEEL para requisição de dados do pacote “relação de empreendimentos
                 de geração distribuída”.
             </li><br>
-            <li><b>Obs. 1.1:</b> Sugerimos a utilização do “Python” para o consumo de API, mas poderá ser
+            <li><b>Obs:</b> Sugerimos a utilização do “Python” para o consumo de API, mas poderá ser
                 usada a linguagem de programação em que achar mais adequada.
             </li>
             <li>
@@ -31,22 +33,81 @@
                 estado federativo.
             </li><br>
             <li>A Potência instalada de cada estado</li><br>
-            <li><b>Obs. 1.2:</b> Uso das colunas “DthAtualizaCadastralEmpreend”, ”DscClasseConsumo“,
+            <li><b>Obs:</b> Uso das colunas “DthAtualizaCadastralEmpreend”, ”DscClasseConsumo“,
                 “MdaPotenciaInstaladaKW” e “SigUF”.
             </li><br>
             <li>Organização dos dados para estrutura similar a banco de dados SQL: exportar
                 dados em arquivos “json” e “csv”.
             </li><br>
         </ul>
+        <div>
+            <h4>Para realizar o download do arquivo JSON:</h4>
+            <button id="btnDados1" class="button"><a href="{{ url_for('download_file', filename='empreendimentos.json') }}">CLIQUE AQUI</a></button>
+        </div>
+        <div>
+            <h4>Para realizar o download do arquivo CSV:</h4>
+            <button id="btnDados2" class="button"><a href="{{ url_for('download_file', filename='dados.csv') }}">CLIQUE AQUI</a></button>
+        </div>
+        <br>
+        <hr>
+        <h3>2. EXPOSIÇÃO DOS DADOS EM FORMA GRÁFICA</h3>
+        <ul>
+            <li>
+                <p><b>Selecione 2 das opções abaixo:</b></p><br>
+                <ol>
+                    <li>
+                        Elaboração de um gráfico mostrando a evolução temporal do Total
+                        Mensal de Empreendimentos por Estado e por Classe de Consumo;
+                    </li><br>
+                    <li>
+                        Elaboração de um gráfico mostrando a evolução temporal da Potência
+                        Instalada Total (KW) por Estado;
+                    </li><br>
+                    <li>
+                        <b>Obrigatória:</b> Selecione variáveis de forma livre e faça a exposição da
+                        maneira que achar mais adequada (Será adotado como diferencial o uso da
+                        criatividade).
+                    </li><br>
+                </ol>
+            </li>
+            <li>
+                Sugerimos o uso de html, CSS, JavaScript, etc, porém a exposição dos dados em forma gráfica poderá ser feita através de outras ferramentas gráficas.
+            </li><br>
+            <li>
+                <p><b>Informações a serem enviadas:</b></p><br>
+                <ul>
+                    <li>Códigos elaborados de Back e Front-end</li><br>
+                    <li>
+                        <b>Obs:</b> Os arquivos devem ser de fácil interação, a preferência para acessar o conteúdo em Front-end (como os gráficos) é que não tenha necessidade de instalar bibliotecas, softwares e afins (por exemplo: o Front-end elaborado em html deve abrir uma aba no navegador com o conteúdo produzido);
+                    </li><br>
+                    <li>Dados exportados;</li><br>
+                    <li>Link de outras plataformas de DashBoard, caso utilizados.</li><br>
+                </ul>
+            </li><br>
+        </ul>
+        <div>
+            <h4>Para acessar o Gráfico da evolução temporal do total mensal de empreendimentos por estado e por classe de consumo:</h4>
+            <button id="btnDados3" class="button">CLIQUE AQUI</button>
+            <script>
+                $(document).ready(function() {
+                $('#btnDados3').click(function() {
+                    window.location.href = "/grafico.html";
+                });
+                });
+            </script>
+        </div>
+        <div>
+            <h4>Para acessar o Gráfico da evolução temporal da potência instalada total (KW) por estado:</h4>
+            <button id="btnDados4" class="button">CLIQUE AQUI</button>
+            <script>
+                $(document).ready(function() {
+                  $('#btnDados4').click(function() {
+                    window.location.href = "/grafico2.html";
+                  });
+                });
+            </script>
+        </div>
     </div>
     <br>
-    <button id="btnDados" class="button">Visualizar Dados</button>
-    <script>
-        $(document).ready(function() {
-          $('#btnDados').click(function() {
-            window.location.href = "/dados";
-          });
-        });
-    </script>
 </body>
 </html>
